@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_fluro_demo/router/router.dart';
+import 'package:flutter_fluro_demo/router/ui/layouts/dashboard_layout.dart';
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    AppRouter.configureRoutes();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Fluro Demo',
+      initialRoute: '/',
+      onGenerateRoute: AppRouter.router.generator,
+      builder: (context, child) {
+        return DashboardLayout(child: child!);
+      },
+    );
+  }
+}
