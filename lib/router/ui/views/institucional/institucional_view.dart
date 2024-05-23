@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fluro_demo/services/navigator_service.dart';
 
 class InstitucionalView extends StatelessWidget {
   const InstitucionalView({super.key});
@@ -12,7 +13,8 @@ class InstitucionalView extends StatelessWidget {
             const Text('Institucional View'),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  // Navigator.pushNamed(context, '/');
+                  NavigationService.navigateTo('/');
                 },
                 child: const Text('Dashboard')),
           ],

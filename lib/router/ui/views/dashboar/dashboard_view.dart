@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fluro_demo/services/navigator_service.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -12,7 +13,8 @@ class DashboardView extends StatelessWidget {
             const Text('Dashboard View'),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/institucional');
+                  // Navigator.pushNamed(context, '/institucional');
+                  NavigationService.navigateTo('/institucional');
                 },
                 child: const Text('Institucional')),
           ],

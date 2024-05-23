@@ -28,7 +28,7 @@ class AppRouter {
     router.define(
       '/institucional',
       handler: mainInstitucional,
-      transitionType: TransitionType.inFromLeft,
+      transitionType: TransitionType.fadeIn,
     );
   }
 }
